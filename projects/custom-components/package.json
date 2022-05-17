@@ -1,0 +1,28 @@
+{
+  "name": "custom-components",
+  "version": "0.0.1",
+  "author": "Ruchita Dudhat",
+  "description": "Angular custom button created with custom logic and custom UI",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Simconruchi/Angular-Custom-Components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Simconruchi/Angular-Custom-Components/issues",
+    "email": "dudhat.ruchita@gmail.com"
+  },
+  "keywords": [
+    "custom-components",
+    "custom-button",
+    "custom-input",
+    "angular custom component"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
