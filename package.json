@@ -1,5 +1,5 @@
 {
-  "name": "custom-components",
+  "name": "@simconruchi/custom-components-sample",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

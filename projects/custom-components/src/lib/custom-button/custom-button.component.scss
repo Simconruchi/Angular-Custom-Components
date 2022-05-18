@@ -1,0 +1,66 @@
+    .custom-button-primary {
+        height: 48px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        background: #080A52;
+        color: #fff;
+        border-radius: 12px;
+        border: 1px solid #080A52;
+
+        .title-wrap {
+            text-align: center;
+            justify-content: center;
+
+            .title {
+                align-self: center;
+                font-weight: 500;
+            }
+
+            .mr-10 {
+                margin-right: 10px;
+            }
+
+            .ml-10 {
+                margin-left: 10px;
+            }
+        }
+    }
+    .custom-button-secondary{
+        height: 48px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        background: #fff;
+        color: #080A52;
+        border-radius: 12px;
+        border: 1px solid #E6E7EE;
+
+        .title-wrap {
+            text-align: center;
+            justify-content: center;
+
+            .title {
+                align-self: center;
+                font-weight: 500;
+            }
+
+            .mr-10 {
+                margin-right: 10px;
+            }
+
+            .ml-10 {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    button[disabled] {
+        background: #E6E7EE !important;
+        color: #060845 !important;
+        border: 1px solid #E6E7EE !important;
+    }
+
+    .d-flex {
+        display: flex;
+    }

@@ -1,6 +1,6 @@
 {
-  "name": "custom-components",
-  "version": "0.0.1",
+  "name": "w4u-custom-components",
+  "version": "0.0.14",
   "author": "Ruchita Dudhat",
   "description": "Angular custom button created with custom logic and custom UI",
   "private": false,

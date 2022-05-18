@@ -42,9 +42,10 @@
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": false
   },
-  "defaultProject": "custom-components"
+  "defaultProject": "custom-components-sample"
 }
