@@ -1,0 +1,14 @@
+<div class="d-flex">
+    <input type="tel" #otp1 class="input-wrap mr-15 text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_1"
+        (keyup)="enterOTP($event,otp2,'')" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+    <input type="tel" #otp2 class="input-wrap mr-15 text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_2"
+        (keyup)="enterOTP($event,otp3,otp1)" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+    <input type="tel" #otp3 class="input-wrap mr-15 text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_3"
+        (keyup)="enterOTP($event,otp4,otp2)" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+    <input type="tel" #otp4 class="input-wrap mr-15 text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_4"
+        (keyup)="enterOTP($event,otp5,otp3)" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+    <input type="tel" #otp5 class="input-wrap mr-15 text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_5"
+        (keyup)="enterOTP($event,otp6,otp4)" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+    <input type="tel" #otp6 class="input-wrap text-align-center" maxlength="1" pattern="[0-9]" [(ngModel)]="otp_input_6"
+        (keyup)="enterOTP($event,'',otp5)" (keypress)="onkeyPressNumber($event)" [placeholder]="placeholder">
+</div>

@@ -19,7 +19,17 @@
             "production": {
               "tsConfig": "projects/custom-components/tsconfig.lib.prod.json"
             }
-          }
+          },
+          "styles": [
+            "src/global.scss"
+          ],
+          "assets": [
+            {
+              "glob": "**/*",
+              "input": "src/assets",
+              "output": "assets"
+            }
+          ]
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",

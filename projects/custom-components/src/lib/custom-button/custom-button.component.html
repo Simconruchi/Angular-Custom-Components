@@ -22,3 +22,16 @@
         </div>
     </div>
 </button>
+
+
+<button *ngIf="button == 'ternary'" type="button" class="custom-button-ternary" (click)="onBtnClick()" [disabled]="disabled">
+    <div class="d-flex title-wrap">
+        <div *ngIf="image && !showLogoOnEnd" class="mr-10">
+            <img [src]="image">
+        </div>
+        <div class="title"> {{title}} </div>
+        <div *ngIf="image && showLogoOnEnd" class="ml-10">
+            <img [src]="image">
+        </div>
+    </div>
+</button>

@@ -1,5 +1,5 @@
     .custom-button-primary {
-        height: 48px;
+        height: 44px;
         width: 100%;
         text-align: center;
         font-size: 16px;
@@ -13,6 +13,9 @@
             justify-content: center;
 
             .title {
+                line-height: 24px;
+                font-weight: 500;
+                font-size: 16px;
                 align-self: center;
                 font-weight: 500;
             }
@@ -26,8 +29,15 @@
             }
         }
     }
-    .custom-button-secondary{
-        height: 48px;
+
+    .custom-button-primary:hover:enabled {
+        background: #060845 !important;
+        color: #FFFFFF !important;
+        border: 1px solid #060845 !important;
+    }
+
+    .custom-button-secondary {
+        height: 44px;
         width: 100%;
         text-align: center;
         font-size: 16px;
@@ -41,6 +51,9 @@
             justify-content: center;
 
             .title {
+                line-height: 24px;
+                font-weight: 500;
+                font-size: 16px;
                 align-self: center;
                 font-weight: 500;
             }
@@ -55,12 +68,56 @@
         }
     }
 
-    button[disabled] {
+    .custom-button-secondary:hover:enabled {
         background: #E6E7EE !important;
         color: #060845 !important;
         border: 1px solid #E6E7EE !important;
     }
 
-    .d-flex {
-        display: flex;
+    .custom-button-ternary {
+        height: 44px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        background: #E6E7EE;
+        color: #080A52;
+        border-radius: 12px;
+        border: 1px solid #E6E7EE;
+        box-shadow: 0px 1px 2px rgba(26, 26, 26, 0.04);
+
+        .title-wrap {
+            text-align: center;
+            justify-content: center;
+
+            .title {
+                line-height: 24px;
+                font-weight: 500;
+                font-size: 16px;
+                align-self: center;
+                font-weight: 500;
+            }
+
+            .mr-10 {
+                margin-right: 10px;
+            }
+
+            .ml-10 {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .custom-button-ternary:hover:enabled {
+        background: #E6E7EE !important;
+        color: #060845 !important;
+        border: 1px solid #E6E7EE !important;
+    }
+
+    button[disabled] {
+        background: #EBEBF1 !important;
+        color: #B2B3CB !important;
+        border: 1px solid #EBEBF1 !important;
+        opacity: 0.6;
+        cursor: not-allowed;
+        box-shadow: 0px 1px 2px rgba(26, 26, 26, 0.04);
     }

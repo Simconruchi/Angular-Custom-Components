@@ -1,1 +1,56 @@
-<input [type]="inputType" class="input-wrap" [placeholder]="placeholder" (keyup)="onKeyUp()" [(ngModel)]="ngModelData">
+<div *ngIf="inputType != 'radio' && inputType != 'file' && inputType != 'textarea' && inputType != 'checkbox'"
+    class="c-input-wrap">
+    <img id="img-icon-left" *ngIf="imgPath && iconPosition != 'right'" class="input-icon-left" [src]="imgPath"
+        (click)="imgPathClick()">
+    <img id="img1-icon-left" *ngIf="imgPath1 && iconPosition != 'right'" class="input-icon-left" [src]="imgPath1"
+        (click)="imgPath1Click()">
+    <input [type]="inputType" [placeholder]="placeholder" (keyup)="onKeyUp($event)" class="input-wrap"
+        (keypress)="onkeyPressNumber($event)" (change)="onInputChange($event)" id="{{id}}" name="{{name}}"
+        [value]="value" [(ngModel)]="ngModelData" [maxlength]="maxlength" autocomplete="off"
+        (click)="focusOnActiveField()"
+        [ngClass]="{'text-align-center': textAlign == 'center','text-align-left': textAlign == 'left' 
+        ,'text-align-right': textAlign == 'right','input-wrap-padding': imgPath || imgPath1 ,'after-icon-input':iconPosition != 'right'}">
+    <img id="img-icon" *ngIf="imgPath && iconPosition == 'right'" class="input-icon" [src]="imgPath"
+        (click)="imgPathClick()">
+    <img id="img1-icon" *ngIf="imgPath1 && iconPosition == 'right'" class="input-icon" [src]="imgPath1"
+        (click)="imgPath1Click()">
+    <label *ngIf="for" for="{{id}}">
+        <img id="img-icon" class="input-icon" [src]="imgPath">
+    </label>
+    <label *ngIf="for" for="{{id}}">
+        <img id="img-icon" class="input-icon" [src]="imgPath1">
+    </label>
+</div>
+
+<div *ngIf="inputType == 'radio'" class="d-flex input-radio-wrap">
+    <input type="radio" id="{{id}}" name="{{name}}" value="{{value}}" (change)="onRadioCheck($event)"
+        [(ngModel)]="ngModelData">
+    <label for="{{id}}" class="align-self-center radio-label">{{value}}</label>
+</div>
+
+<div *ngIf="inputType == 'checkbox'" class="d-flex input-checkbox-wrap">
+    <input type="checkbox" id="{{id}}" name="{{name}}" value="{{value}}" (change)="onCheckboxCheck($event)"
+        [(ngModel)]="ngModelData">
+    <label for="{{id}}"
+        class="align-self-center checkbox-label fw-400 sub-heading-sm ml-16 pl-16 secondary">{{value}}</label>
+</div>
+
+<div *ngIf="inputType == 'file'" class="text-align-center">
+    <label [ngClass]="{'custom-file-upload': !onButtonClick,'custom-file-upload-btn': onButtonClick}">
+        <input class="d-none" type="file" [accept]="accept" [(ngModel)]="ngModelData" (change)="fileChangeEvent($event)"
+            autocomplete="off" #file />
+        <div class="camera_outine" *ngIf="!onButtonClick">
+            <img class="img-wrapper" *ngIf="!ngModelData" [src]="imgPath">
+            <img class="img-wrapper" *ngIf="ngModelData" [src]="ngModelData">
+        </div>
+        <custom-button [title]="title" [button]="button" (btnClick)="file.click()">
+        </custom-button>
+    </label>
+</div>
+
+<div *ngIf="inputType == 'textarea'">
+    <textarea [rows]="rows" [placeholder]="placeholder" (keyup)="onKeyUp($event)" [maxlength]="maxlength"
+        class="input-textarea-wrap" [(ngModel)]="ngModelData" [id]="id" autocomplete="off"
+        (click)="focusOnActiveField()"
+        [ngClass]="{'text-align-center': textAlign == 'center','text-align-left': textAlign == 'left' ,'text-align-right': textAlign == 'right'}"></textarea>
+</div>
