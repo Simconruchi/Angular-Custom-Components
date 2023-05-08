@@ -12,6 +12,10 @@
             text-align: center;
             justify-content: center;
 
+            .align-self-center {
+                align-self: center;
+            }
+
             .title {
                 line-height: 24px;
                 font-weight: 500;
@@ -49,6 +53,10 @@
         .title-wrap {
             text-align: center;
             justify-content: center;
+
+            .align-self-center {
+                align-self: center;
+            }
 
             .title {
                 line-height: 24px;
@@ -89,6 +97,10 @@
             text-align: center;
             justify-content: center;
 
+            .align-self-center {
+                align-self: center;
+            }
+
             .title {
                 line-height: 24px;
                 font-weight: 500;
@@ -120,4 +132,12 @@
         opacity: 0.6;
         cursor: not-allowed;
         box-shadow: 0px 1px 2px rgba(26, 26, 26, 0.04);
+    }
+
+    .h-48 {
+        height: 48px !important;
+    }
+
+    .black {
+        color: #000 !important;
     }

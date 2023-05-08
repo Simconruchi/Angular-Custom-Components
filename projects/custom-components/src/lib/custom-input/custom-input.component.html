@@ -4,10 +4,10 @@
         (click)="imgPathClick()">
     <img id="img1-icon-left" *ngIf="imgPath1 && iconPosition != 'right'" class="input-icon-left" [src]="imgPath1"
         (click)="imgPath1Click()">
-    <input [type]="inputType" [placeholder]="placeholder" (keyup)="onKeyUp($event)" class="input-wrap"
-        (keypress)="onkeyPressNumber($event)" (change)="onInputChange($event)" id="{{id}}" name="{{name}}"
-        [value]="value" [(ngModel)]="ngModelData" [maxlength]="maxlength" autocomplete="off"
-        (click)="focusOnActiveField()"
+    <input [type]="inputType" [placeholder]="placeholder" (keyup)="onKeyUp($event)" (paste)="onPaste($event)"
+        class="input-wrap" (keypress)="onkeyPressNumber($event)" (change)="onInputChange($event)" id="{{id}}"
+        name="{{name}}" [value]="value" [(ngModel)]="ngModelData" [maxlength]="maxlength" autocomplete="off"
+        [readonly]="isReadOnly" (click)="focusOnActiveField()"
         [ngClass]="{'text-align-center': textAlign == 'center','text-align-left': textAlign == 'left' 
         ,'text-align-right': textAlign == 'right','input-wrap-padding': imgPath || imgPath1 ,'after-icon-input':iconPosition != 'right'}">
     <img id="img-icon" *ngIf="imgPath && iconPosition == 'right'" class="input-icon" [src]="imgPath"

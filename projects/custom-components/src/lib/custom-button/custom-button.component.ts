@@ -13,6 +13,8 @@ export class CustomButtonComponent implements OnInit {
   @Input() disabled?: boolean = false;
   @Input() button?= "primary";
   @Output() btnClick = new EventEmitter();
+  @Input() height?: string = '44px';
+  @Input() color?: string = "";
 
   constructor() { }
 

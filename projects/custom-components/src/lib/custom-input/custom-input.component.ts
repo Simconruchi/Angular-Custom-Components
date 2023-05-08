@@ -9,7 +9,7 @@ export class CustomInputComponent implements OnInit {
   @Input() inputType?= "text";
   @Input() placeholder?= "";
   @Input() ngModelData?: any = "";
-  @Input() maxlength?= "";
+  @Input() maxlength?: any;
   @Input() id?= null;
   @Input() textAlign?= 'left';
   @Input() value?= "";
@@ -24,8 +24,11 @@ export class CustomInputComponent implements OnInit {
   @Input() iconPosition: string = 'right';
   @Input() for?: boolean = false;
   @Input() isNumber?: boolean = false;
+  @Input() isReadOnly?: boolean = false;
 
   @Output() keyUp = new EventEmitter();
+  @Output() inputChange = new EventEmitter();
+  @Output() pasteData = new EventEmitter();
   @Output() radioChange = new EventEmitter();
   @Output() fileChange = new EventEmitter();
   @Output() dateChange = new EventEmitter();
@@ -89,7 +92,25 @@ export class CustomInputComponent implements OnInit {
         ngModelData: this.ngModelData,
       }
       this.dateChange.emit(obj);
+    } else {
+      let obj = {
+        event: event,
+        ngModelData: event.target.value,
+        id: this.id
+      }
+      this.inputChange.emit(obj);
     }
+  }
+
+  onPaste(event: ClipboardEvent) {
+    let clipboardData = event.clipboardData;
+    let pastedText = clipboardData.getData('text');
+    let obj = {
+      event: event,
+      ngModelData: pastedText,
+      id: this.id
+    }
+    this.pasteData.emit(obj);
   }
 
   focusOnActiveField() {

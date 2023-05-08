@@ -1,6 +1,7 @@
-<button *ngIf="button == 'primary'" type="button" class="custom-button-primary" (click)="onBtnClick()" [disabled]="disabled">
+<button *ngIf="button == 'primary'" type="button" class="custom-button-primary" (click)="onBtnClick()"
+    [disabled]="disabled" [ngClass]="{'h-48': height == '48px'}">
     <div class="d-flex title-wrap">
-        <div *ngIf="image && !showLogoOnEnd" class="mr-10">
+        <div *ngIf="image && !showLogoOnEnd" class="mr-10 align-self-center">
             <img [src]="image">
         </div>
         <div class="title"> {{title}} </div>
@@ -11,9 +12,10 @@
 </button>
 
 
-<button *ngIf="button == 'secondary'" type="button" class="custom-button-secondary" (click)="onBtnClick()" [disabled]="disabled">
+<button *ngIf="button == 'secondary'" type="button" class="custom-button-secondary" (click)="onBtnClick()"
+    [disabled]="disabled" [ngClass]="{'h-48': height == '48px'}">
     <div class="d-flex title-wrap">
-        <div *ngIf="image && !showLogoOnEnd" class="mr-10">
+        <div *ngIf="image && !showLogoOnEnd" class="mr-10 align-self-center">
             <img [src]="image">
         </div>
         <div class="title"> {{title}} </div>
@@ -24,9 +26,10 @@
 </button>
 
 
-<button *ngIf="button == 'ternary'" type="button" class="custom-button-ternary" (click)="onBtnClick()" [disabled]="disabled">
+<button *ngIf="button == 'ternary'" type="button" class="custom-button-ternary" (click)="onBtnClick()"
+    [disabled]="disabled" [ngClass]="{'h-48': height == '48px', 'black' : color == 'black'}">
     <div class="d-flex title-wrap">
-        <div *ngIf="image && !showLogoOnEnd" class="mr-10">
+        <div *ngIf="image && !showLogoOnEnd" class="mr-10 align-self-center">
             <img [src]="image">
         </div>
         <div class="title"> {{title}} </div>
